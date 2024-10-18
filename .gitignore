@@ -1,0 +1,20 @@
+#dev files
+neural_networks/Anterior_Frontal/labeled-data/
+neural_networks/Posterior_Frontal/labeled-data/
+neural_networks/Sagittal/labeled-data/
+neural_networks/Anterior_Frontal/dlc-models
+neural_networks/Posterior_Frontal/dlc-models
+neural_networks/Sagittal/dlc-models
+neural_networks/Anterior_Frontal/videos/
+neural_networks/Posterior_Frontal/videos/
+neural_networks/Sagittal/videos/
+*.pyc
+pgr_ml/PGR_Dataset_1/
+
+
+#report gen files
+venv
+__pycache__
+*.pyc
+.DS_Store
+.env

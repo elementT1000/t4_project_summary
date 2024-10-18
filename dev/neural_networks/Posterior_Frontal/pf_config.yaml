@@ -1,0 +1,102 @@
+    # Project definitions (do not edit)
+Task: Frontal Plane Running
+scorer: Ethan
+date: Jul19
+multianimalproject: false
+identity:
+
+    # Project path (change when moving around)
+project_path: dev\neural_networks\Posterior_Frontal
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  project_path\Posterior_Frontal\videos\tk_022323_pf_ns.MP4:
+    crop: 0, 1080, 0, 1920
+  project_path\Posterior_Frontal\videos\oj_022323_pf_s.MP4:
+    crop: 0, 1080, 0, 1920
+  project_path\Posterior_Frontal\videos\hl_022323_pf_s.MP4:
+    crop: 0, 1080, 0, 1920
+  project_path\Posterior_Frontal\videos\lj_022323_pf_ns.MP4:
+    crop: 0, 1080, 0, 1920
+  project_path\Posterior_Frontal\videos\fc_022323_pf_ns.MP4:
+    crop: 0, 1080, 0, 1920
+bodyparts:
+- RightWaistLine
+- RightFemurHead
+- RightKnee
+- RightAnkle
+- RightHeel
+- RightFirstMetatarsal
+- Right5thMetatarsal
+- LeftWaistLine
+- LeftFemurHead
+- LeftKnee
+- LeftAnkle
+- LeftHeel
+- LeftFirstMetatarsal
+- Left5thMetatarsal
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 30
+
+    # Plotting configuration
+skeleton:
+- - RightWaistLine
+  - LeftWaistLine
+- - RightFemurHead
+  - RightKnee
+- - RightKnee
+  - RightAnkle
+- - RightAnkle
+  - RightHeel
+- - RightHeel
+  - RightMTBJoint
+- - RightHeel
+  - Right5thMetatarsal
+- - RightFirstMetatarsal
+  - Right5thMetatarsal
+- - LeftFemurHead
+  - LeftKnee
+- - LeftKnee
+  - LeftAnkle
+- - LeftAnkle
+  - LeftHeel
+- - LeftHeel
+  - LeftMTBJoint
+- - LeftHeel
+  - Left5thMetatarsal
+- - LeftFirstMetatarsal
+  - Left5thMetatarsal
+
+skeleton_color: white
+pcutoff: 0.6
+dotsize: 7
+alphavalue: 0.7
+colormap: autumn
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 4
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: true
+    #if cropping is true for analysis, then set the values here:
+x1: 360 #Left
+x2: 700 #Right
+y1: 500 #Top
+y2: 1450 #Bottom
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 1000
+- 1000
+move2corner: true

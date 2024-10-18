@@ -1,0 +1,92 @@
+    # Project definitions (do not edit)
+Task: sagittal network
+scorer: Ethan
+date: Aug31
+multianimalproject: false
+identity:
+
+    # Project path (change when moving around)
+project_path: dev\neural_networks\Sagittal
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  project_path\Sagittal\labeled-data\am_021423_sl_ns:
+    crop: 150, 930, 250, 1450
+  project_path\Sagittal\labeled-data\am_021423_sr_ns:
+    crop: 150, 930, 250, 1450
+  project_path\Sagittal\labeled-data\ba_021423_sl_s:
+    crop: 150, 930, 250, 1450
+  project_path\Sagittal\labeled-data\ba_021423_sr_s:
+    crop: 150, 930, 250, 1450
+  project_path\Sagittal\labeled-data\bj_021423_sl_ns:
+    crop: 150, 930, 250, 1450
+  project_path\Sagittal\labeled-data\bj_021423_sr_ns:
+    crop: 150, 930, 250, 1450
+  project_path\Sagittal\labeled-data\bozaa_021423_sl_s:
+    crop: 150, 930, 250, 1450
+  project_path\Sagittal\labeled-data\bozaa_021423_sr_s:
+    crop: 150, 930, 250, 1450
+  project_path\Sagittal\labeled-data\mr_021423_sl_s:
+    crop: 150, 930, 250, 1450
+  project_path\Sagittal\labeled-data\mr_021423_sr_s:
+    crop: 150, 930, 250, 1450
+bodyparts:
+- Shoulder
+- Elbow
+- Hip
+- Knee
+- Ankle
+- Heel
+- Ball_of_Foot
+- Big_Toe
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 20
+
+    # Plotting configuration
+skeleton:
+- - Shoulder
+  - Elbow
+- - Shoulder
+  - Hip
+- - Hip
+  - Knee
+- - Knee
+  - Ankle
+- - Ankle
+  - Heel
+- - Heel
+  - Ball_of_Foot
+- - Ball_of_Foot
+  - Big_Toe
+
+skeleton_color: white
+pcutoff: 0.6
+dotsize: 7
+alphavalue: 0.7
+colormap: autumn
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 5
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: true
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 1080
+y1: 300
+y2: 1600
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: false

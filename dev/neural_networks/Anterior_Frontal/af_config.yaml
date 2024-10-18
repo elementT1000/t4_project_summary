@@ -1,0 +1,85 @@
+    # Project definitions (do not edit)
+Task: Anterior_Frontal
+scorer: Ethan
+date: Sep19
+multianimalproject: false
+identity:
+
+    # Project path (change when moving around)
+project_path: dev\neural_networks\Anterior_Frontal
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  project_path\videos\hl_022323_af_s.MP4:
+    crop: 100, 1000, 500, 1370
+  project_path\videos\lj_022323_af_ns.MP4:
+    crop: 100, 1000, 500, 1370
+  project_path\videos\oj_022323_af_s.MP4:
+    crop: 100, 1000, 500, 1370
+  project_path\videos\tk_022323_af_ns.MP4:
+    crop: 100, 1000, 500, 1370
+bodyparts:
+- LeftWaistline # edge of the shorts
+- LeftVastusLat # actually the superior end of the lateral collateral ligament
+- LeftCoLig # the inferior end of the medial collateral ligament
+- LeftAnkle # medial malleolus 
+- Left1Prox # proximal head of the proximal phalange (1st)
+- Left5Prox
+- RightWaistline
+- RightVastusLat
+- RightCoLig
+- RightAnkle # medial malleolus 
+- Right1Prox
+- Right5Prox
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 30
+
+    # Plotting configuration
+skeleton:
+- - LeftWaistline
+  - LeftVastusLat
+- - LeftCoLig
+  - LeftAnkle
+- - LeftAnkle
+  - Left1Prox
+- - Left1Prox
+  - Left5Prox
+- - RightWaistline
+  - RightVastusLat
+- - RightCoLig
+  - RightAnkle
+- - RightAnkle
+  - Right1Prox
+- - Right1Prox
+  - Right5Prox
+skeleton_color: white
+pcutoff: 0.6
+dotsize: 5
+alphavalue: 0.7
+colormap: autumn
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 3
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: true
+    #if cropping is true for analysis, then set the values here:
+x1: 350 #Left
+x2: 730 #Right
+y1: 550 #Top
+y2: 1450 #Bottom
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true

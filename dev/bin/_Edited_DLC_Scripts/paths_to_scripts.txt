@@ -1,0 +1,16 @@
+[HOME]\anaconda3\envs\DEEPLABCUT\Lib\site-packages\deeplabcut\post_processing\angle_finder.py
+	-angle finder
+[HOME]\anaconda3\envs\DEEPLABCUT\Lib\site-packages\deeplabcut\utils\write_angles.py
+	-write angles with OpenCV 
+[HOME]\anaconda3\envs\DEEPLABCUT\Lib\site-packages\deeplabcut\utils
+	-auxiliaryfunctions.py
+	-make_labeled_video.py
+[HOME]\anaconda3\envs\DEEPLABCUT\Lib\site-packages\deeplabcut\post_processing
+	-filtering.py
+
+
+When to use this directory:
+ - You have made a new install of deeplabcut
+(This is all in the DEEPLABCUT conda env)
+ - pip install deeplabcut[gui,tf]==2.2.1.1
+ - IN THAT CASE, you must copy and paste the .py files in this folder into the paths stated above. 
