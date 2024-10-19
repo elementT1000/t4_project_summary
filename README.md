@@ -34,7 +34,7 @@ These videos were then put into a processing directory where the product/stride/
 Finally, at the end of video and .csv creation, a machine learning model would be run on the .csv. It would take a row of angles, and predict the phase of gait that the individual was in during that row, see Figure 2 Section C. This was an entirely **novel development, to our knowledge, and a specific request from the PT's**. Having the phase of gait labeled on the .csv and frame simplified the review process. 
 
 #### Figure 3: Data Review and Reporting
-![alt text](readme_assets/VideoandT4ReportPhoto.png)
+![alt text](readme_assets/VideoT4ReportPhoto.png)
 
 ## 2.4. Data Processing and Sharing
 PTs could review the .csv file by uploading it to our deployed Dash app, which enabled individualized patient data analysis. They could **highlight the phase of gait, isolate the perspective of the movement plane (ex. Anterior Frontal), and look at the movement patterns**. These reports also allowed the PT to input patient information and prescriptive exercise plans for the patient and email it to them from their own email addresses. 
