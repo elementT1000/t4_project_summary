@@ -34,7 +34,7 @@ These videos were then put into a processing directory where the product/stride/
 Finally, at the end of video and .csv creation, a machine learning model would be run on the .csv. It would take a row of angles, and predict the phase of gait that the individual was in during that row, see Figure 2 Section C. This was an entirely **novel development, to our knowledge, and a specific request from the PT's**. Having the phase of gait labeled on the .csv and frame simplified the review process. 
 
 #### Figure 3: Data Review and Reporting
-![alt text](readme_assets\VideoandT4ReportPhoto.png)
+![alt text](readme_assets/VideoandT4ReportPhoto.png)
 
 ## 2.4. Data Processing and Sharing
 PTs could review the .csv file by uploading it to our deployed Dash app, which enabled individualized patient data analysis. They could **highlight the phase of gait, isolate the perspective of the movement plane (ex. Anterior Frontal), and look at the movement patterns**. These reports also allowed the PT to input patient information and prescriptive exercise plans for the patient and email it to them from their own email addresses. 
@@ -75,7 +75,7 @@ Due to the nature of phase labeling, this dataset was inherently unbalanced. Som
 A systematic testing suite compared the performance of six machine learning models: Linear (Multi-Class Logistic Regression), Non-linear (Decision Tree, SVM, K-Nearest Neighbor), and Ensemble (Random Forest, Extra Trees). We used this approach to experimentally explore what algorithm would perform best on this dataset. A k-fold cross validation test was used to provide a reliable estimate of model accuracy and reduce the risk of overfitting in a single train-test split. The results can be seen below in Figure 5. 
 
 #### Figure 5: Boxplot of Accuracy and Standard Deviation of the K-fold Cross Validation Test
-![alt text](readme_assets\BoxplotOfModels.png)
+![alt text](readme_assets/BoxplotOfModels.png)
 
 Further hyperparameter tuning and increased size of the dataset created a model that was **98% accurate** when trained with the Extra Trees algorithm. This approach can be reviewed in the dev/pgr_ml/prototyper.ipynb file. 
 
