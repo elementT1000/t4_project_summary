@@ -58,7 +58,7 @@ def ml_runner(csv_path, planes):
 
 if __name__ == "__main__":
     #script, csv_path = argv
-    csv_path = r"C:\Users\14124\Downloads\Pontikos_Eli\angles_ep_031323_sr_s_analyzed - Copy.csv"
+    csv_path = r"\angles_ep_031323_sr_s_analyzed - Copy.csv"
     plns = ['Sagittal Plane Left', 'Sagittal Plane Right']
     ml_runner(csv_path=csv_path, planes=plns)
 

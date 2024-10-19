@@ -5,7 +5,7 @@ import joblib
 
 
 file = 'CN 7-6-2022 Sagittal.csv'
-path = 'C:/Users/trott/PycharmProjects/posetracking/ProcessedVideos/' + file
+path = home + 'posetracking/ProcessedVideos/' + file
 
 def ml_runner(csv_path):
     df = pd.read_csv(path)
@@ -47,4 +47,4 @@ def ml_runner(csv_path):
     final = pd.concat([store_frame, concat_result], axis='columns')
 
     filename = 'predicted ' + file
-    final.to_csv('C:/Users/trott/PycharmProjects/posetracking/ProcessedVideos/' + filename, index=False)
+    final.to_csv('posetracking/ProcessedVideos/' + filename, index=False)
