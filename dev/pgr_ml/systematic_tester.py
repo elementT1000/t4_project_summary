@@ -68,7 +68,7 @@ def test_models(X_trn, y_trn, X_tst, model):
     return scores, fit, predict
 
 
-Path = 'C:/Users/trott/PycharmProjects/posetracking/ProcessedVideos/labeled csv files/General Label System and Model/minmax_training_set.csv'
+Path = home + '/posetracking/ProcessedVideos/labeled csv files/General Label System and Model/minmax_training_set.csv'
 X_train, y_train, X_test, y_test = load_dataset(Path)
 print(X_train.shape, y_train.shape, Counter(y_train))
 
